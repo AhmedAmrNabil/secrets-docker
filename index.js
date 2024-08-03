@@ -30,16 +30,8 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-const db = new pg.Client({
-  port:5432
-});
-console.log(process.env.PGPORT);
-
-try{
-  db.connect();
-}catch (err){
-  console.error(err);
-}
+const db = new pg.Client();
+db.connect();
 
 app.get("/", (req, res) => {
   if (req.isAuthenticated()) res.redirect("/secrets");
