@@ -1,0 +1,16 @@
+{
+	"cookie": {
+		"originalMaxAge": 10800000,
+		"expires": "2024-08-03T18:51:38.706Z",
+		"httpOnly": true,
+		"path": "/"
+	},
+	"passport": {
+		"user": {
+			"id": 2,
+			"email": "hello@niga.com",
+			"password": "$2b$10$AbDUUbSDnzzI327l0mPK1OOngu.e.617lkAXU/tXBPF2N2B0ppd2i",
+			"secret": null
+		}
+	}
+}
