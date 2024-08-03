@@ -2,7 +2,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import bcrypt from "bcrypt";
-// import "dotenv/config.js";
 import session from "express-session";
 import connectPgSimple from "connect-pg-simple";
 import passport from "passport";
@@ -156,7 +155,6 @@ passport.use(
       clientID: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL: process.env.GOOGLE_CLIENT_CALLBACK,
-      // callbackURL: "http://btngana.viewdns.net/auth/google/secrets",
     },
     async (accessToken, refreshToken, profile, cb) => {
       try {
