@@ -2,6 +2,9 @@ services:
   database:
     image: postgres-db
     container_name: ${PGHOST}
+    command: -p ${PGPORT}
+    expose:
+      - ${PGPORT}
     build: 
       context: ./db
       dockerfile: ./Dockerfile
@@ -24,7 +27,7 @@ services:
     container_name: server
     env_file: .env
     ports:
-      - ${PUBLIC_PORT}:${PORT}
+      - ${PUBLIC_PORT:-3000}:3000
     build: 
       context: .
       dockerfile: Dockerfile
